@@ -1,1 +1,2 @@
 # Simple-Regression
+This simple linear regression uses satisfaction (satis) as the dependent variable and likelihood of recommendation (recommend) as the metric independent variable. This metric variable is measured on a 10-point scale, 0 being poor and 10 being excellent, that is the likelihood that a customer would recommend HBAT to other firms. The goal is to predict satisfaction using recommended. I would expect that customers how would highly recommend HBAT to other firms will also be highly satisfied with their past purchases from HBAT.
