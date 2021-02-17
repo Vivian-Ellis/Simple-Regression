@@ -1,0 +1,13 @@
+ods rtf file='N:\Multivariate Data Analysis DSCI 499\Week 3\Simple regression.rtf';
+*Running simple regression; *with satisfaction as the dependent variable and product quality as the independent variable;
+proc reg data=sasuser.hbat plots(label) = (rstudentbypredicted residualhistogram);   
+model satis = Recommend;   
+output out=one p=predicted student=sresid;
+proc gplot data=sasuser.hbat; 
+*using gplot to produce better graphics;    
+plot satis * Recommend;
+proc gplot data=one;  
+*using gplot to produce better graphics for the residual plots;  
+plot sresid*(predicted id);
+run;
+ods rtf close;
